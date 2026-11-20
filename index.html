@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Campus Connect - College problem reporting and management demonstration">
+  <title>Campus Connect | One Campus. Every Voice.</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="demo-banner">
+    FRONTEND DEMONSTRATION · Sample data is stored only in this browser
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#" data-page="home">
+      <span class="brand-mark">CC</span>
+      <span>Campus<span class="brand-accent">Connect</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#" data-page="home">Home</a>
+      <a href="#" data-page="report">Report a Problem</a>
+      <a href="#" data-page="track">Track Reports</a>
+      <a href="#" data-page="dashboard">Dashboard</a>
+      <a href="#" data-page="profile">Profile</a>
+      <button class="notification-button" id="notificationButton" title="Notifications" aria-label="Open notifications">
+        ♧ <span id="notificationCount" class="notification-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="demo-role-bar">
+      <div>
+        <strong>Demo role:</strong>
+        <span class="muted">Switch roles to preview different dashboards.</span>
+      </div>
+      <select id="demoRole" aria-label="Choose demonstration role">
+        <option value="student">Student</option>
+        <option value="faculty">Faculty</option>
+        <option value="admin">Administrator</option>
+      </select>
+    </div>
+
+    <!-- HOME -->
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">YOUR CAMPUS. YOUR VOICE.</span>
+          <h1>Every problem deserves a <span>solution.</span></h1>
+          <p>
+            A single platform to report college issues, follow their progress
+            and help build a better campus for everyone.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-page="report">Report a Problem <span>→</span></button>
+            <button class="btn btn-outline" data-page="track">Track a Report</button>
+          </div>
+          <div class="hero-note">Simple reporting · Transparent updates · Better campus</div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-card visual-main">
+            <div class="visual-icon">🏫</div>
+            <h3>A better campus starts here.</h3>
+            <p>Report. Connect. Improve.</p>
+            <div class="visual-progress"><span></span></div>
+            <small>Building a better student experience</small>
+          </div>
+          <div class="floating-card floating-one">✓ Issues made visible</div>
+          <div class="floating-card floating-two">💬 Every voice matters</div>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">HOW IT WORKS</span>
+          <h2>From problem to solution</h2>
+          <p>Follow a simple and transparent reporting process.</p>
+        </div>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-number">01</span>
+          <div class="step-icon">📝</div>
+          <h3>Report an issue</h3>
+          <p>Choose a category, explain the problem and submit your report.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">02</span>
+          <div class="step-icon">🔎</div>
+          <h3>Review and assign</h3>
+          <p>The responsible team reviews and assigns the issue.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">03</span>
+          <div class="step-icon">⚙️</div>
+          <h3>Work on a solution</h3>
+          <p>Follow progress and view updates as the issue is addressed.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">04</span>
+          <div class="step-icon">🎉</div>
+          <h3>Confirm resolution</h3>
+          <p>Review the outcome and confirm or reopen the report.</p>
+        </article>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">REPORTING CATEGORIES</span>
+          <h2>What can you report?</h2>
+          <p>Choose the area that best describes your college-related problem.</p>
+        </div>
+      </div>
+
+      <div class="category-grid">
+        <article class="category-card"><span>♿</span><h3>Physical Accessibility</h3><p>Ramps, lifts, accessible paths and facilities.</p></article>
+        <article class="category-card"><span>📚</span><h3>Educational & Academic</h3><p>Classrooms, labs, learning resources and academic support.</p></article>
+        <article class="category-card"><span>🏢</span><h3>Infrastructure & Facilities</h3><p>Water, electricity, washrooms, furniture and maintenance.</p></article>
+        <article class="category-card"><span>🚌</span><h3>Bus & Transportation</h3><p>Routes, delays, pickup points and transport facilities.</p></article>
+        <article class="category-card"><span>💻</span><h3>Digital Campus</h3><p>Portals, Wi-Fi, online services and technical issues.</p></article>
+        <article class="category-card"><span>💡</span><h3>Other College Problems</h3><p>Any other genuine college-related concern.</p></article>
+      </div>
+
+      <div class="cta-strip">
+        <div><h2>Have something to report?</h2><p>Your feedback can help make the campus better.</p></div>
+        <button class="btn btn-light" data-page="report">Submit a Report →</button>
+      </div>
+    </section>
+
+    <!-- REPORT FORM -->
+    <section class="page" id="page-report">
+      <div class="page-heading">
+        <span class="eyebrow">CAMPUS FEEDBACK</span>
+        <h1>Report a Problem</h1>
+        <p>Share the details so the responsible team can understand the issue.</p>
+      </div>
+
+      <form id="reportForm" class="form-card">
+        <div class="form-section-title"><span>01</span><div><h3>Issue information</h3><p>Tell us what kind of problem you are facing.</p></div></div>
+
+        <div class="form-grid">
+          <label>Category <span class="required">*</span>
+            <select id="category" required>
+              <option value="">Select a category</option>
+              <option>Physical Accessibility</option>
+              <option>Educational and Academic Issues</option>
+              <option>College Infrastructure and Facilities</option>
+              <option>Bus and Transportation</option>
+              <option>Digital Campus Issues</option>
+              <option>Other College-Related Problems</option>
+            </select>
+          </label>
+
+          <label>Subcategory <span class="required">*</span>
+            <select id="subcategory" required disabled>
+              <option value="">Choose a category first</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="conditionalFields" class="conditional-fields"></div>
+
+        <div class="form-grid">
+          <label>Building / Campus location <span class="required">*</span>
+            <input id="location" required placeholder="e.g. Main Block, Library, Canteen">
+          </label>
+          <label>Floor / Exact location
+            <input id="exactLocation" placeholder="e.g. Second floor, Room 204">
+          </label>
+        </div>
+
+        <label>Description <span class="required">*</span>
+          <textarea id="description" rows="5" required minlength="10" placeholder="Describe the problem clearly. Include when it happened and how it affects you."></textarea>
+          <small class="field-hint">Please provide at least 10 characters.</small>
+        </label>
+
+        <div class="form-grid">
+          <label>Urgency <span class="required">*</span>
+            <select id="urgency" required>
+              <option value="">Select urgency</option>
+              <option>Low</option><option>Medium</option><option>High</option><option>Critical</option>
+            </select>
+          </label>
+          <label>Attach an image (optional)
+            <input id="attachment" type="file" accept="image/png,image/jpeg,image/webp">
+            <small class="field-hint">Image only · Maximum 2 MB in this demo</small>
+          </label>
+        </div>
+
+        <div class="form-footer">
+          <p>Fields marked with <span class="required">*</span> are required.</p>
+          <button type="submit" class="btn btn-primary">Submit Report →</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- TRACK REPORTS -->
+    <section class="page" id="page-track">
+      <div class="page-heading">
+        <span class="eyebrow">REPORT HISTORY</span>
+        <h1>Track Your Reports</h1>
+        <p>Search and filter reports saved in this browser demonstration.</p>
+      </div>
+
+      <div class="filter-bar">
+        <input id="reportSearch" placeholder="Search by report ID, title or location...">
+        <select id="statusFilter">
+          <option value="">All statuses</option>
+          <option>Pending</option><option>Under Review</option><option>Assigned</option>
+          <option>In Progress</option><option>Resolved</option><option>Reopened</option><option>Rejected</option>
+        </select>
+        <select id="categoryFilter">
+          <option value="">All categories</option>
+          <option>Physical Accessibility</option>
+          <option>Educational and Academic Issues</option>
+          <option>College Infrastructure and Facilities</option>
+          <option>Bus and Transportation</option>
+          <option>Digital Campus Issues</option>
+          <option>Other College-Related Problems</option>
+        </select>
+      </div>
+      <div id="reportsList" class="reports-list"></div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="page" id="page-dashboard">
+      <div class="page-heading dashboard-heading">
+        <div><span class="eyebrow">OVERVIEW</span><h1 id="dashboardTitle">Student Dashboard</h1><p id="dashboardDescription">Your campus reports at a glance.</p></div>
+        <button class="btn btn-primary" data-page="report">+ New Report</button>
+      </div>
+      <div class="stats-grid" id="statsGrid"></div>
+      <div class="dashboard-columns">
+        <div class="panel">
+          <div class="panel-heading"><div><h3 id="dashboardListTitle">Recent Reports</h3><p>Latest activity in this browser demo</p></div><button class="text-button" data-page="track">View all</button></div>
+          <div id="dashboardReports"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-heading"><div><h3>Recent Notifications</h3><p>Demonstration updates</p></div></div>
+          <div id="dashboardNotifications"></div>
+        </div>
+      </div>
+      <div id="roleTools" class="panel role-tools"></div>
+    </section>
+
+    <!-- PROFILE -->
+    <section class="page" id="page-profile">
+      <div class="page-heading"><span class="eyebrow">YOUR ACCOUNT</span><h1>My Profile</h1><p>Update your demonstration profile information.</p></div>
+      <form id="profileForm" class="form-card profile-card">
+        <div class="profile-avatar" id="profileAvatar">S</div>
+        <div class="form-grid">
+          <label>Full Name <span class="required">*</span><input id="profileName" required placeholder="Enter your full name"></label>
+          <label>Email Address <span class="required">*</span><input id="profileEmail" type="email" required placeholder="example@gmail.com"></label>
+          <label>Department<input id="profileDepartment" placeholder="e.g. Computer Science"></label>
+          <label>Student / Employee ID<input id="profileId" placeholder="Enter your student ID"></label>
+        </div>
+        <div class="form-footer"><p>Your details are saved in this browser only.</p><button class="btn btn-primary" type="submit">Save Profile</button></div>
+      </form>
+    </section>
+
+    <!-- NOTIFICATIONS -->
+    <section class="page" id="page-notifications">
+      <div class="page-heading"><span class="eyebrow">UPDATES</span><h1>Notifications</h1><p>View demonstration updates related to reports.</p></div>
+      <div class="panel">
+        <div class="panel-heading"><h3>All notifications</h3><button class="text-button" id="markAllRead">Mark all as read</button></div>
+        <div id="notificationsList"></div>
+      </div>
+    </section>
+
+    <!-- REPORT DETAILS -->
+    <section class="page" id="page-details">
+      <button class="back-button" data-page="track">← Back to reports</button>
+      <div id="reportDetails"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="brand footer-brand"><span class="brand-mark">CC</span><span>Campus<span class="brand-accent">Connect</span></span></div>
+      <p>One Campus. Every Voice. Better Solutions.</p>
+      <small>Frontend demonstration · Not connected to a live college management system.</small>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
+
